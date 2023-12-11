@@ -1,14 +1,10 @@
-<div class="card" style="width: 18rem;">
+<div class="card my-3 py-3 bordered" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Nome do produto: <%= product.name %></h5>
-    <p class="card-text">Descrição do produto: <%= product.description %></p>
-    
+    <h5 class="card-title"><%= product.name %></h5>
+    <p class="card-text"><%= product.price %></p>
+    <h6 class="card-subtitle mb-2 text-body-secondary"><%= product.description %></h6>
     <%= link_to "Editar", edit_product_path(product) %>
     
-    <%= link_to "Deletar", product_path(product), data: { turbo_method: :delete }, class: "text-danger" %>
+    <%= link_to "Deletar", product_path(product), data: { turbo_method: :delete }, class: "card-link" %>
   </div>
-  <div class="card-footer d-flex justify-content-between">
-    <span class="card-price">Preço: <%= product.price %></span>
-  </div>
-</div>
 </div>
